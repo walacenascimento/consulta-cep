@@ -12,7 +12,10 @@ public class Main {
 
         try {
             Endereco endereco = consultaCep.buscacep(cep);
-            System.out.println(endereco);
+            // System.out.println(endereco);
+            GravarDados gravarDados = new GravarDados();
+            gravarDados.gerarArquivoJson(endereco);
+
         } catch (Exception e){
             System.out.println(e.getMessage());
         };
